@@ -16,6 +16,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     all_city = ['chicago', 'new york city', 'washington']
     while True:
@@ -29,6 +30,7 @@ def get_filters():
         month = input('Please enter the month to analyze (all, january, february, ... , june)\n')
         if month.lower() == 'all' or month.lower() in months:
             break
+
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     while True:
@@ -56,6 +58,7 @@ def load_data(city, month, day):
     df['hour'] = df['Start Time'].dt.hour
     df['month'] = df['Start Time'].dt.month
     df['day'] = df['Start Time'].dt.dayofweek
+
     if month.lower() != 'all':
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
@@ -129,6 +132,7 @@ def user_stats(df):
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
+
     start_time = time.time()
 
     # Display counts of user types
@@ -143,6 +147,7 @@ def user_stats(df):
         print('The earliest year of birth of customers is', str(int(df['Birth Year'].min())))
         print('The most recent year of birth of customers is', str(int(df['Birth Year'].max())))
         print('The most common year of birth of customers is', str(int(df['Birth Year'].mode()[0])))
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -151,12 +156,10 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break

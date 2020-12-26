@@ -2,7 +2,7 @@
 12/26/2020
 
 ### Project Title
-Bike Project
+Bike Project for Chicago, NYC, and Washington
 
 ### Description
 This project provides insight for bike usage in Chicago, NYC, and Washington

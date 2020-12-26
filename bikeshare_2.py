@@ -24,15 +24,15 @@ def get_filters():
             break
 
     # get user input for month (all, january, february, ... , june)
-    months = ['january', 'february', 'march', 'april', 'may', 'june']
+    months = ['January', 'February', 'March', 'April', 'May', 'June']
     while True:
-        month = input('Please enter the month to analyze (all, january, february, ... , june)\n')
+        month = input('Please enter the month to analyze (all, January, February, ... , June)\n')
         if month.lower() == 'all' or month.lower() in months:
             break
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     while True:
-        day = input('Please enter the day of week to analyze (all, monday, tuesday, ... sunday)\n')
+        day = input('Please enter the day of week to analyze (all, Monday, Tuesday, ... Sunday)\n')
         if day.lower() == 'all' or day.lower() in days_of_week:
             break
 

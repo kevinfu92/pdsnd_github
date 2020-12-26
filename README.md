@@ -1,15 +1,15 @@
 ### Date created
-Include the date you created this project and README file.
+12/26/2020
 
 ### Project Title
-Replace the Project Title
+Bike Project
 
 ### Description
-Describe what your project is about and what it does
+This project provides insight for bike usage in Chicago, NYC, and Washington
 
 ### Files used
-Include the files used
+bikeshare_2.py, bikeshare_2.zip, chicago.csv, new_york_city.csv, washington.csv, .gitignore, 
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Udacity
 
